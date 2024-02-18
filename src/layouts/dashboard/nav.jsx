@@ -81,7 +81,6 @@ export default function Nav({ openNav, onCloseNav }) {
       >
         <Box
           component="img"
-          // src="/assets/illustrations/illustration_avatar.png"
           src={illustration_avatar}
           sx={{ width: 100, position: 'absolute', top: -50 }}
         />
@@ -125,7 +124,7 @@ export default function Nav({ openNav, onCloseNav }) {
 
       <Box sx={{ flexGrow: 1 }} />
 
-      {renderUpgrade}
+      {/* {renderUpgrade} */}
     </Scrollbar>
   )
 
