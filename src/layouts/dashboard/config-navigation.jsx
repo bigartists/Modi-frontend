@@ -4,7 +4,7 @@ import SvgColor from 'src/components/svg-color'
 
 const icon = name => (
   <SvgColor
-    src={require(`@/assets/icons/navbar/${name}.svg`)}
+    src={require(`../../assets/icons/navbar/${name}.svg`)}
     sx={{ width: 1, height: 1 }}
   />
 )

@@ -4,6 +4,9 @@ import Box from '@mui/material/Box'
 import Popover from '@mui/material/Popover'
 import MenuItem from '@mui/material/MenuItem'
 import IconButton from '@mui/material/IconButton'
+import ic_flag_en from '@/assets/icons/ic_flag_en.svg'
+import ic_flag_de from '@/assets/icons/ic_flag_de.svg'
+import ic_flag_fr from '@/assets/icons/ic_flag_fr.svg'
 
 // ----------------------------------------------------------------------
 
@@ -11,17 +14,17 @@ const LANGS = [
   {
     value: 'en',
     label: 'English',
-    icon: require('@/assets/icons/ic_flag_en.svg'),
+    icon: ic_flag_en,
   },
   {
     value: 'de',
     label: 'German',
-    icon: require('@/assets/icons/ic_flag_de.svg'),
+    icon: ic_flag_de,
   },
   {
     value: 'fr',
     label: 'French',
-    icon: require('@/assets/icons/ic_flag_fr.svg'),
+    icon: ic_flag_fr,
   },
 ]
 

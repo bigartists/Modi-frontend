@@ -23,6 +23,7 @@ import Scrollbar from 'src/components/scrollbar'
 
 import { NAV } from './config-layout'
 import navConfig from './config-navigation'
+import illustration_avatar from '@/assets/illustrations/illustration_avatar.png'
 
 // ----------------------------------------------------------------------
 
@@ -80,7 +81,8 @@ export default function Nav({ openNav, onCloseNav }) {
       >
         <Box
           component="img"
-          src="/assets/illustrations/illustration_avatar.png"
+          // src="/assets/illustrations/illustration_avatar.png"
+          src={illustration_avatar}
           sx={{ width: 100, position: 'absolute', top: -50 }}
         />
 

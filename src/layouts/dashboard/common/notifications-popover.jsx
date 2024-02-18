@@ -22,7 +22,7 @@ import { fToNow } from '@/utils/format-time'
 
 import Iconify from 'src/components/iconify'
 import Scrollbar from 'src/components/scrollbar'
-
+import avatar_2 from '@/assets/images/avatars/avatar_2.jpg'
 // ----------------------------------------------------------------------
 
 const NOTIFICATIONS = [
@@ -39,7 +39,7 @@ const NOTIFICATIONS = [
     id: faker.string.uuid(),
     title: faker.person.fullName(),
     description: 'answered to your comment on the Minimal',
-    avatar: require('@/assets/images/avatars/avatar_2.jpg'),
+    avatar: avatar_2,
     type: 'friend_interactive',
     createdAt: sub(new Date(), { hours: 3, minutes: 30 }),
     isUnRead: true,
