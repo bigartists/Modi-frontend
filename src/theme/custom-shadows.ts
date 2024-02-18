@@ -1,4 +1,4 @@
-import { alpha } from "@mui/material/styles";
+import { alpha } from '@mui/material/styles'
 
 import {
   grey,
@@ -9,12 +9,12 @@ import {
   success,
   warning,
   secondary,
-} from "./palette";
+} from './palette'
 
 // ----------------------------------------------------------------------
 
 export function customShadows() {
-  const transparent = alpha(grey[500], 0.16);
+  const transparent = alpha(grey[500], 0.16)
 
   return {
     z1: `0 1px 2px 0 ${transparent}`,
@@ -27,11 +27,11 @@ export function customShadows() {
     //
     card: `0 0 2px 0 ${alpha(grey[500], 0.08)}, 0 12px 24px -4px ${alpha(
       grey[500],
-      0.08
+      0.08,
     )}`,
     dropdown: `0 0 2px 0 ${alpha(
       grey[500],
-      0.24
+      0.24,
     )}, -20px 20px 40px -4px ${alpha(grey[500], 0.24)}`,
     dialog: `-40px 40px 80px -8px ${alpha(common.black, 0.24)}`,
     //
@@ -41,5 +41,5 @@ export function customShadows() {
     success: `0 8px 16px 0 ${alpha(success.main, 0.24)}`,
     warning: `0 8px 16px 0 ${alpha(warning.main, 0.24)}`,
     error: `0 8px 16px 0 ${alpha(error.main, 0.24)}`,
-  };
+  }
 }

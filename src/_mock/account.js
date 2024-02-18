@@ -5,4 +5,5 @@ export const account = {
   email: 'demo@minimals.cc',
   // photoURL: '/assets/images/avatars/avatar_25.jpg',
   photoURL: avatar_25,
+  role: 'auditor',
 }

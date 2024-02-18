@@ -13,6 +13,7 @@
     "release": "standard-version"
   },
   "dependencies": {
+
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@faker-js/faker": "^8.4.1",
@@ -37,6 +38,7 @@
     "babel-plugin-styled-components": "^2.0.7",
     "classnames": "^2.3.2",
     "cross-env": "^7.0.3",
+    "date-fns": "^3.3.1",
     "dayjs": "^1.11.6",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jsdoc": "^39.2.9",
@@ -107,6 +109,7 @@
     "craco-css-modules": "^1.0.1",
     "craco-less": "^2.0.0",
     "cz-conventional-changelog": "^3.3.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "husky": "^8.0.1",
     "lint-staged": "^12.4.1",
     "postcss": "^7",

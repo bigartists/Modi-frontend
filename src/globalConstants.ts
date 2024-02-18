@@ -1,3 +1,3 @@
-export const BASE_API_URL = '/aigc/v1/'
+export const BASE_API_URL = '/modi/v1/'
 export const DEFAULT_AUTHORIZATION_TOKEN_EXPIRATION = 1000 * 60 * 60
 export const DEFAULT_DEBOUNCE_WAIT = 300

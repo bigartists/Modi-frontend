@@ -42,11 +42,3 @@ export default function AppWidgetSummary({
     </Card>
   )
 }
-
-AppWidgetSummary.propTypes = {
-  color: PropTypes.string,
-  icon: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
-  sx: PropTypes.object,
-  title: PropTypes.string,
-  total: PropTypes.number,
-}
