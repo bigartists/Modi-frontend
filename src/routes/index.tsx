@@ -18,7 +18,6 @@ export default function Router() {
       path: '/',
       element: <DashboardLayout></DashboardLayout>,
       children: [
-        // { element: <Navigate to="user" />, index: true },
         {
           index: true,
           element: <MainPage />,
@@ -29,6 +28,17 @@ export default function Router() {
         },
         { path: 'products', element: <ProductsPage /> },
         { path: 'blog', element: <BlogPage /> },
+        {
+          path: 'app',
+          children: [
+            {
+              element: <UserPage />,
+              index: true,
+            },
+            { path: 'one', element: <UserPage /> },
+            { path: 'two', element: <BlogPage /> },
+          ],
+        },
       ],
     },
     {
