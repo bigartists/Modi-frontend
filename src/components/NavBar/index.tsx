@@ -90,7 +90,7 @@ const Wrapper = styled('div')`
     0px 57px 57px rgba(20, 97, 219, 0.09), 0px 14px 31px rgba(20, 97, 219, 0.1),
     0px 0px 0px rgba(20, 97, 219, 0.1);
   backdrop-filter: blur(2px);
-  /* Note: backdrop-filter has minimal browser support */
+  /* Note: backdrop-filter has  browser support */
   border-radius: 12px;
   /* padding: 24px; */
   .logo {

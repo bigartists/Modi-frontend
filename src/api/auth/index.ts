@@ -4,7 +4,7 @@ export const login = async (email: string, password: string) => {
   return request('/login', {
     method: 'POST',
     data: {
-      email,
+      username: email,
       password,
     },
   })
