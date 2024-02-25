@@ -12,16 +12,12 @@ import IconButton from '@mui/material/IconButton'
 import LoadingButton from '@mui/lab/LoadingButton'
 import { alpha, useTheme } from '@mui/material/styles'
 import InputAdornment from '@mui/material/InputAdornment'
-
 import { useRouter } from 'src/routes/hooks'
-
 import { bgGradient } from 'src/theme/css'
-
 import Logo from 'src/components/logo'
 import Iconify from 'src/components/iconify'
 import { Alert } from '@mui/material'
 import { login } from '@/api/auth'
-import { getUsers } from '@/api/users'
 
 // ----------------------------------------------------------------------
 
@@ -36,9 +32,8 @@ export default function LoginView() {
   const handleClick = async () => {
     try {
       console.log(email, password)
-      // router.push('/')
-      // const result = await login(email, password)
-      const result = await getUsers()
+      const result = await login(email, password)
+      router.push('/')
       console.log('🚀 ~ handleClick ~ result:', result)
     } catch (error) {
       console.log('🚀 ~ handleClick ~ error:', error)
