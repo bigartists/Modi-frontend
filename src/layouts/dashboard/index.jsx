@@ -1,7 +1,7 @@
 import { useState, Suspense } from 'react'
 import PropTypes from 'prop-types'
 import { Outlet } from 'react-router-dom'
-
+import useAuthStore from '@/store/auth'
 import Box from '@mui/material/Box'
 
 import Nav from './nav'
@@ -12,7 +12,7 @@ import Header from './header'
 
 export default function DashboardLayout({ children }) {
   const [openNav, setOpenNav] = useState(false)
-
+  const authStore = useAuthStore()
   return (
     <>
       <Header onOpenNav={() => setOpenNav(true)} />

@@ -10,6 +10,7 @@ import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'
 
 import { account } from 'src/_mock/account'
+import { Stack } from '@mui/material'
 
 // ----------------------------------------------------------------------
 
@@ -94,11 +95,19 @@ export default function AccountPopover() {
 
         <Divider sx={{ borderStyle: 'dashed' }} />
 
-        {MENU_OPTIONS.map(option => (
+        {/* {MENU_OPTIONS.map(option => (
           <MenuItem key={option.label} onClick={handleClose}>
             {option.label}
           </MenuItem>
-        ))}
+        ))} */}
+
+        <Stack sx={{ p: 1 }}>
+          {MENU_OPTIONS.map(option => (
+            <MenuItem key={option.label} onClick={handleClose}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </Stack>
 
         <Divider sx={{ borderStyle: 'dashed', m: 0 }} />
 
@@ -106,7 +115,8 @@ export default function AccountPopover() {
           disableRipple
           disableTouchRipple
           onClick={handleClose}
-          sx={{ typography: 'body2', color: 'error.main', py: 1.5 }}
+          // sx={{ typography: 'body2', color: 'error.main', py: 1.5 }}
+          sx={{ m: 1, fontWeight: 'fontWeightBold', color: 'error.main' }}
         >
           Logout
         </MenuItem>

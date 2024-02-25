@@ -1,6 +1,10 @@
 import { alpha } from '@mui/material/styles'
 import { outlinedInputClasses } from '@mui/material/OutlinedInput'
-
+import bg1 from '@/assets/images/bg/cyan-blur.png'
+import bg2 from '@/assets/images/bg/red-blur.png'
+import { listClasses } from '@mui/material/List'
+import { menuItem, paper } from './css'
+import { textField } from './overrides/components/textfield'
 // ----------------------------------------------------------------------
 
 export function overrides(theme: any) {
@@ -72,6 +76,21 @@ export function overrides(theme: any) {
         },
       },
     },
+    MuiPopover: {
+      styleOverrides: {
+        paper: {
+          ...paper({ theme, dropdown: true }),
+          [`& .${listClasses.root}`]: {
+            paddingTop: 0,
+            paddingBottom: 0,
+          },
+          // backgroundImage: `url(${bg1}), url(${bg2})`,
+          // backgroundSize: '50%  50%', // 两张图片各占一半宽度
+          // backgroundPosition: 'top right, left bottom',
+          // backgroundRepeat: 'no-repeat, no-repeat', // 不重复背景图片
+        },
+      },
+    },
     MuiCard: {
       styleOverrides: {
         root: {
@@ -93,15 +112,7 @@ export function overrides(theme: any) {
         },
       },
     },
-    MuiOutlinedInput: {
-      styleOverrides: {
-        root: {
-          [`& .${outlinedInputClasses.notchedOutline}`]: {
-            borderColor: alpha(theme.palette.grey[500], 0.24),
-          },
-        },
-      },
-    },
+
     MuiPaper: {
       defaultProps: {
         elevation: 0,
@@ -139,8 +150,10 @@ export function overrides(theme: any) {
       styleOverrides: {
         root: {
           ...theme.typography.body2,
+          ...menuItem(theme),
         },
       },
     },
+    ...textField(theme),
   }
 }

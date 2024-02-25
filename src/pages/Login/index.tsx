@@ -19,28 +19,47 @@ import { bgGradient } from 'src/theme/css'
 
 import Logo from 'src/components/logo'
 import Iconify from 'src/components/iconify'
+import { Alert } from '@mui/material'
+import { login } from '@/api/auth'
+import { getUsers } from '@/api/users'
 
 // ----------------------------------------------------------------------
 
 export default function LoginView() {
   const theme = useTheme()
-
   const router = useRouter()
 
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
 
-  const handleClick = () => {
-    router.push('/dashboard')
+  const handleClick = async () => {
+    try {
+      console.log(email, password)
+      // router.push('/')
+      // const result = await login(email, password)
+      const result = await getUsers()
+      console.log('🚀 ~ handleClick ~ result:', result)
+    } catch (error) {
+      console.log('🚀 ~ handleClick ~ error:', error)
+    }
   }
 
   const renderForm = (
     <>
       <Stack spacing={3}>
-        <TextField name="email" label="Email address" />
+        <TextField
+          name="email"
+          label="Email address"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+        />
 
         <TextField
           name="password"
           label="Password"
+          value={password}
+          onChange={e => setPassword(e.target.value)}
           type={showPassword ? 'text' : 'password'}
           InputProps={{
             endAdornment: (
@@ -109,7 +128,7 @@ export default function LoginView() {
             maxWidth: 420,
           }}
         >
-          <Typography variant="h4">Sign in to Minimal</Typography>
+          <Typography variant="h4">Sign in to Modi</Typography>
 
           <Typography variant="body2" sx={{ mt: 2, mb: 5 }}>
             Don’t have an account?
@@ -118,44 +137,10 @@ export default function LoginView() {
             </Link>
           </Typography>
 
-          <Stack direction="row" spacing={2}>
-            <Button
-              fullWidth
-              size="large"
-              color="inherit"
-              variant="outlined"
-              sx={{ borderColor: alpha(theme.palette.grey[500], 0.16) }}
-            >
-              <Iconify icon="eva:google-fill" color="#DF3E30" />
-            </Button>
-
-            <Button
-              fullWidth
-              size="large"
-              color="inherit"
-              variant="outlined"
-              sx={{ borderColor: alpha(theme.palette.grey[500], 0.16) }}
-            >
-              <Iconify icon="eva:facebook-fill" color="#1877F2" />
-            </Button>
-
-            <Button
-              fullWidth
-              size="large"
-              color="inherit"
-              variant="outlined"
-              sx={{ borderColor: alpha(theme.palette.grey[500], 0.16) }}
-            >
-              <Iconify icon="eva:twitter-fill" color="#1C9CEA" />
-            </Button>
-          </Stack>
-
-          <Divider sx={{ my: 3 }}>
-            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-              OR
-            </Typography>
-          </Divider>
-
+          <Alert severity="info" sx={{ mb: 3 }}>
+            User email : <strong>admin@admin.com</strong> / password :
+            <strong> admin</strong>
+          </Alert>
           {renderForm}
         </Card>
       </Stack>

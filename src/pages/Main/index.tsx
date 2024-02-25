@@ -5,6 +5,8 @@ import MainView from './MainView'
 // ----------------------------------------------------------------------
 
 export default function AppPage() {
+  const baseUrl = process.env.REACT_APP_HOST_API
+  console.log('🚀 ~ AppPage ~ baseUrl:', baseUrl)
   return (
     <>
       <Helmet>
