@@ -38,8 +38,26 @@ export default defineConfig({
     ],
   },
   server: {
+    // https: true,
+    host: '0.0.0.0',
     port: 8282,
+    open: true,
+    proxy: {
+      '/modi': {
+        target: 'http://localhost:8888',
+        changeOrigin: true,
+        secure: false,
+        // bypass(req, res, options) {
+        //   const proxyUrl = new URL(
+        //     (options.rewrite as any)(req?.url || ''),
+        //     options?.target?.toString() || '',
+        //   )
+        //   res.setHeader('x-res-proxyUrl', proxyUrl.href)
+        // },
+      },
+    },
   },
+
   preview: {
     port: 8080,
   },

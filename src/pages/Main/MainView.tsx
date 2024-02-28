@@ -33,10 +33,7 @@ export default function AppView() {
             color="success"
             icon={
               // <img alt="icon" src="../../assets/icons/glass/ic_glass_bag.png" />
-              <img
-                alt="icon"
-                src={require('../../assets/icons/glass/ic_glass_bag.png')}
-              />
+              <img alt="icon" src={'/assets/icons/glass/ic_glass_bag.png'} />
             }
           />
         </Grid>
@@ -47,10 +44,7 @@ export default function AppView() {
             total={1352831}
             color="info"
             icon={
-              <img
-                alt="icon"
-                src={require('../../assets/icons/glass/ic_glass_users.png')}
-              />
+              <img alt="icon" src={'/assets/icons/glass/ic_glass_users.png'} />
             }
           />
         </Grid>
@@ -61,10 +55,7 @@ export default function AppView() {
             total={1723315}
             color="warning"
             icon={
-              <img
-                alt="icon"
-                src={require('../../assets/icons/glass/ic_glass_buy.png')}
-              />
+              <img alt="icon" src={'/assets/icons/glass/ic_glass_buy.png'} />
             }
           />
         </Grid>
@@ -77,7 +68,7 @@ export default function AppView() {
             icon={
               <img
                 alt="icon"
-                src={require('../../assets/icons/glass/ic_glass_message.png')}
+                src={'/assets/icons/glass/ic_glass_message.png'}
               />
             }
           />
@@ -188,9 +179,7 @@ export default function AppView() {
               id: faker.string.uuid(),
               title: faker.person.jobTitle(),
               description: faker.commerce.productDescription(),
-              image: require(`../../assets/images/covers/cover_${
-                index + 1
-              }.jpg`),
+              image: `/assets/images/covers/cover_${index + 1}.jpg`,
               postedAt: faker.date.recent(),
             }))}
           />
